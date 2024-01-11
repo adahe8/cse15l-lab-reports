@@ -5,9 +5,8 @@ initial working directory: `/home/lecture 1/`
 ![Image](cdnoargs.png)
 
 \
-**with path to directory as an argument** \
+**with path to directory as an argument** 
 
-\
 
 **with path to file as an argument** \
 working directory: `/home/lecture1/messages`
