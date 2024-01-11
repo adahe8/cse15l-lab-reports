@@ -9,4 +9,4 @@ initial working directory: `/home/lecture 1/`
 
 **with path to file as an argument**
 working directory: `/home/lecture1/messages`
-![Image](cdfilename.pnge)
+![Image](cdfilename.png)
