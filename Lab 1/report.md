@@ -35,15 +35,15 @@
 3. `cat` concatenates file contents; prints them out in the command line
 - **with no arguments**
   working directory: `/home`\
-  ![Image](cdfilename.png)
+  ![Image](catnoargs.png)
   `cat` reads and displays file contents in the command line; when there is no argument, like in this case, that means that the user hasn't specified a file to read. Thus the default function of `cat` is to prompt the terminal to take in user inputted strings to perform concatenation on, resulting in the "blank line" output where the user can type a string that will then be read and printed on the next line.
 
 - **with path to directory as argument**
   working directory: `/home`\
-  ![Image](cdfilename.png)
+  ![Image](cattodirectory.png)
   When a directory path is given, the output is a warning that the argument specified is a directory. Since `cat` works on files, it does not work on a directory since there are multiple files in there, and not sufficient information on what to concatenate.
 
 - **with path to file as an argument**
   working directory: `/home`\
-  ![Image](cdfilename.png)
+  ![Image](catfilepath.png)
   The output is the contents of the file, since `cat` reads file contents, concatenates them to string, and prints them out.
