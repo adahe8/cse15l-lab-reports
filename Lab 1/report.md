@@ -3,12 +3,12 @@
 1.  `cd` changes current working directory
 - **with no arguments**
   initial working directory: `/home/lecture 1/` \
-  ![Image](cdnoargs.png)\
+  ![Image](cdnoargs.png) \\
   When `cd` has no arguments, it means that the user hasn't specified a directory. The command then just switches the working directory over to the one accessed last (the working directory before this current one), or to the base directory if there was no other directory accessed previously.
 
 - **with path to directory as an argument**
   working directory: `/home`
-  ![Image](cdtodirectory.png)\
+  ![Image](cdtodirectory.png) \\
   The current directory is now set to the directory path specified by the coder/ user.
   
 - **with path to file as an argument**
