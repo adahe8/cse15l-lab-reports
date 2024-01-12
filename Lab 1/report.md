@@ -32,7 +32,7 @@
   ![Image](lsfilepath.png)
   The output printed in the terminal is just the file path specified in the argument. This is because `ls` will list all contents of the directory paths specified, and in the argument in this case, there is only a single item in the path: the file itself. 
   
-  3. `cat` concatenates file contents; prints them out in the command line
+3. `cat` concatenates file contents; prints them out in the command line
 - **with no arguments**
   working directory: `/home`\
   ![Image](cdfilename.png)
