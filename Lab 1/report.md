@@ -20,7 +20,6 @@
 - **with no arguments**
   working directory: `/home`\
   When there are no arguments, the user hasn't specified a directory separate from the working directory to list the contents of, so the output is just the contents (folders and files) of the current working directory.\
-
   ![Image](lsnoargs.png)
   
 - **with path to directory as argument**
