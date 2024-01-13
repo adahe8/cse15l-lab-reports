@@ -2,7 +2,8 @@
 ## Lab 1 Blog
 1.  `cd` changes current working directory
 - **with no arguments**
-  initial working directory: `/home/lecture 1/`\ When `cd` has no arguments, it means that the user hasn't specified a directory. The command then just switches the working directory over to the one accessed last (the working directory before this current one), or to the base directory if there was no other directory accessed previously.\
+  initial working directory: `/home/lecture 1/`
+  When `cd` has no arguments, it means that the user hasn't specified a directory. The command then just switches the working directory over to the one accessed last (the working directory before this current one), or to the base directory if there was no other directory accessed previously.\
   ![Image](cdnoargs.png)
 
 - **with path to directory as an argument**
