@@ -3,7 +3,7 @@
 
 ### Part 1: Building a Server
 
-I drew from the NumberServer class we practiced with during lab section, the informational article linked in the NumberServer.java file, and JavaDoc to write the code for `ChatServer.java`.
+I drew from the NumberServer class we practiced with during lab section, the informational article linked in the `NumberServer.java` file, and JavaDoc to write the code for `ChatServer.java`.
 ```
 import java.io.IOException;
 import java.net.URI;
