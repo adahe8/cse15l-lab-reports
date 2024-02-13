@@ -47,6 +47,47 @@ The method `reversed` in lab 4 is buggy; it yields error in testing.
 I choose to analyze special uses of the `grep` command.\
 The standard use of the command follows the formula `grep <command> <file to search>`. Some of the command line options include:
 - `grep -i `:  case insensitive search
+  The special label `grep -i` makes it so that the pattern's casing does not matter; variations of the pattern with uppercase and lowercase characters in any order are returned by the search as well. Like with the standard use of `grep`, the file paths and excerpt where the pattern is located in the text is printed out in the terminal. This is helpful if you want to find all occurences of a word or phrase, whether or not it's at the start of a sentence or emphasized.
+  *example 1:*
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -i "WHO" ./plos/*.txt
+  ./plos/journal.pbio.0020001.txt:        several scientists, who present overwhelming evidence for the disparity in scientific
+  ./plos/journal.pbio.0020001.txt:        lion's share (84.2%), followed by Canada (10.35%). Latin America as a whole contributed
+  ./plos/journal.pbio.0020001.txt:        itself as compared with the GDP of Latin America as a whole. In fact, Albornoz (2001)
+  ./plos/journal.pbio.0020001.txt:        Although there are outstanding scientific researchers in the developing world who
+  ./plos/journal.pbio.0020010.txt:        Kevin Guthrie, who found the quickest way through the maze of conflicting advice—much of
+  ...
+  ```
+  *example 2:*
+  ```
+  grep -i "capps" ./911report/*-12.txt
+                called CAPPS. More than half were identified for further inspection, which applied
+                the place of CAPPS. The deployment of this system has been delayed because of claims
+                    lists should not be delayed while the argument about a successor to CAPPS
+            CAPPS is still part of the screening process, still profiling passengers, with the
+  ```
 - `grep -r`: recursive search through directories
+  The `grep -r` command runs recursively, so it repeats for different levels of files as it enters subdirectories within the working directory, finishes a search of them, and moves on into another subdirectory for all subdirectories and nested layers of files within the working directory to look for the pattern. This is really helpful if you want to find all occurrences of a pattern within an file system, not just a single file or folder.
+  *example 1:*
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -r "doctorate"
+  ./government/Media/Texas_Supreme_Court.txt:doctorate in jurisprudence from Southern Methodist University
+  ./government/Media/GreensburgDailyNews.txt:and a jurisprudence doctorate from Indiana University-Indianapolis
+  ./plos/journal.pbio.0030032.txt:        great majority of bachelor's and master's degree holders, and 40% of doctorates. In other
+  ./plos/journal.pbio.0030032.txt:        For science-based businesses, then, the American S&E doctorate—viewed by many as the
+  ./plos/journal.pbio.0020054.txt:        grasses rubbing together or even by magic. A fire scientist whose doctorate is in tropical
+  ./plos/journal.pbio.0020214.txt:        immediately after getting the candidate degree (the equivalent of a Western doctorate).
+  ./plos/journal.pbio.0020172.txt:        United States, Bela Julesz, with his Hungarian doctorate in engineering, joined the
+  ```
+  *example 2:*\
+  You can specify which directory to recursively search through after the pattern.
+  used `grep -r "deoxyribonucleic" ./biomed`
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -r "deoxyribonucleic" ./biomed./biomed/ar130.txt:          complementary deoxyribonucleic acids (cDNAs) [ 11].
+  ./biomed/1471-2350-3-12.txt:        cDNA complementary deoxyribonucleic acid
+  ./biomed/1471-2350-3-12.txt:        DNA deoxyribonucleic acid
+  ./biomed/gb-2003-4-9-r60.txt:        biochips including complementary deoxyribonucleic acid
+  ./biomed/1471-2164-3-7.txt:        - deoxyribonucleic acid, PBS - phosphate buffer saline, DEX
+  ```
 - `grep -o`: displays only matching part of lines
 - `grep -l`: display only file names of files with matching lines
