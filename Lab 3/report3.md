@@ -67,7 +67,7 @@ The standard use of the command follows the formula `grep <command> <file to sea
             CAPPS is still part of the screening process, still profiling passengers, with the
   ```
 - `grep -r`: recursive search through directories
-  The `grep -r` command runs recursively, so it repeats for different levels of files as it enters subdirectories within the working directory, finishes a search of them, and moves on into another subdirectory for all subdirectories and nested layers of files within the working directory to look for the pattern. This is really helpful if you want to find all occurrences of a pattern within an file system, not just a single file or folder.
+  The `grep -r` command runs recursively, so it repeats for different levels of files as it enters subdirectories within the working directory, finishes a search of them, and moves on into another subdirectory for all subdirectories and nested layers of files within the working directory to look for the pattern. This is really helpful if you want to find all occurrences of a pattern within an file system, not just a single file or folder.\
   *example 1:*
   ```
   (base) Adas-MacBook-Pro:technical adahe$ grep -r "doctorate"
@@ -90,7 +90,7 @@ The standard use of the command follows the formula `grep <command> <file to sea
   ./biomed/1471-2164-3-7.txt:        - deoxyribonucleic acid, PBS - phosphate buffer saline, DEX
   ```
 - `grep -o`: displays only matching part of lines
-  The `-o` label counters the `grep` command's standard behavior of printing out the excerpt (including some characters/ text preceding and following the appearance of the pattern), instead only displaying the the pattern itself for each time it's identified in the file; if the `grep -i` command was given multiple input files, then the file path is printed before the matching string segment. This is helpful for preventing the terminal from being inundated with text; it reduces scrolling and makes counting the appearances per file of a certain pattern cleaner.
+  The `-o` label counters the `grep` command's standard behavior of printing out the excerpt (including some characters/ text preceding and following the appearance of the pattern), instead only displaying the the pattern itself for each time it's identified in the file; if the `grep -i` command was given multiple input files, then the file path is printed before the matching string segment. This is helpful for preventing the terminal from being inundated with text; it reduces scrolling and makes counting the appearances per file of a certain pattern cleaner.\
   *example 1:*
   ```
   (base) Adas-MacBook-Pro:technical adahe$ grep -o "CAPPS" ./911report/*-12.txt
