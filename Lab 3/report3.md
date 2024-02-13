@@ -43,7 +43,7 @@ The method `reversed` in lab 4 is buggy; it yields error in testing.
   ```
   The bug is line `arr[i] = newArray[arr.length-i-1]`  and `return arr`! This means that the original array arr is being assigned with the values of newArray in reverse order rather than the other way around. However, `newArray` is just initialized within the method as a new int array with no arguments, so all its values are automatically zero. Thus, arr just gets populated with zeroes and returned, giving the “got 0” instead of the reversed array error. This is also why an input of an array with only zero values does not fail; the `newArray` returned is an array of the same length as the input array, also with only zero values.
 
-##Part 2: Command Research
+## Part 2: Command Research
 I choose to analyze special uses of the `grep` command.\
 The standard use of the command follows the formula `grep <command> <file to search>`. Some of the command line options include:
 - `grep -i `:  case insensitive search
