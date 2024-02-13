@@ -47,7 +47,7 @@ The method `reversed` in lab 4 is buggy; it yields error in testing.
 I choose to analyze special uses of the `grep` command.\
 The standard use of the command follows the formula `grep <command> <file to search>`. Some of the command line options include:
 - `grep -i `:  case insensitive search
-  The special label `grep -i` makes it so that the pattern's casing does not matter; variations of the pattern with uppercase and lowercase characters in any order are returned by the search as well. Like with the standard use of `grep`, the file paths and excerpt where the pattern is located in the text is printed out in the terminal. This is helpful if you want to find all occurences of a word or phrase, whether or not it's at the start of a sentence or emphasized.
+  The special label `grep -i` makes it so that the pattern's casing does not matter; variations of the pattern with uppercase and lowercase characters in any order are returned by the search as well. Like with the standard use of `grep`, the file paths (if multiple files are inputed) and a short excerpt where the pattern is located in the text is printed out in the terminal. This is helpful if you want to find all occurences of a word or phrase, whether or not it's at the start of a sentence or emphasized.\
   *example 1:*
   ```
   (base) Adas-MacBook-Pro:technical adahe$ grep -i "WHO" ./plos/*.txt
@@ -90,4 +90,59 @@ The standard use of the command follows the formula `grep <command> <file to sea
   ./biomed/1471-2164-3-7.txt:        - deoxyribonucleic acid, PBS - phosphate buffer saline, DEX
   ```
 - `grep -o`: displays only matching part of lines
+  
+  *example 1:*
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -o "CAPPS" ./911report/*-12.txt
+  CAPPS
+  CAPPS
+  CAPPS
+  CAPPS
+  ```
+  *example 2:*
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -o "New York City" ./911report/*.txt
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-1.txt:New York City
+  ./911report/chapter-10.txt:New York City
+  ./911report/chapter-12.txt:New York City
+  ./911report/chapter-12.txt:New York City
+  ./911report/chapter-13.2.txt:New York City
+  ./911report/chapter-13.2.txt:New York City
+  ./911report/chapter-13.2.txt:New York City
+  ./911report/chapter-13.3.txt:New York City
+  ./911report/chapter-13.3.txt:New York City
+  ./911report/chapter-13.4.txt:New York City
+  ./911report/chapter-13.4.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-13.5.txt:New York City
+  ./911report/chapter-3.txt:New York City
+  ./911report/chapter-3.txt:New York City
+  ./911report/chapter-5.txt:New York City
+  ./911report/chapter-5.txt:New York City
+  ./911report/chapter-7.txt:New York City
+  ./911report/chapter-7.txt:New York City
+  ./911report/chapter-8.txt:New York City
+  ./911report/chapter-8.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ./911report/chapter-9.txt:New York City
+  ```
 - `grep -l`: display only file names of files with matching lines
