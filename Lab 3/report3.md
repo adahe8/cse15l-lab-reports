@@ -166,7 +166,7 @@ The standard use of the command follows the formula `grep <command> <file to sea
   (base) Adas-MacBook-Pro:technical adahe$ grep -l "a" ./biomed/ar104.txt
   ./biomed/ar104.txt
   ```
-  ##Citations
+  ## Citations
   I used ChatGPT to help with my research on the `grep` command! I inputed the prompt
   "what are command line options for grep?" and received a list of labels with a short phrase describing its use. From there, I did my own command line testing of each label, and without referring back to the ChatGPT outputs, summarized in my own words what the command was doing. I noticed that ChatGPT's responses contained repetition - the algorithm shared a few labels more than once.\
   **ChatGPT's output:**
