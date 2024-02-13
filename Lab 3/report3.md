@@ -20,7 +20,7 @@ The method `reversed` in lab 4 is buggy; it yields error in testing.
 - **the symptom:** error that value found is 0 when expected last number of input array thrown by testing reversed with an array of nonzero values; no error thrown for array of zeroes.
   ![Image](symptom.png)
 
-- **the bug:** the bug lies in the array assignment and return. The reverse method is supposed to return an array with the values of the input array in reverse order, so the method creates a new array to do this, and the `for` loop is supposed to assign the values (from the last index to 0 index of the input array) to the new array from index 0 to the last index.
+- **the bug:** the bug lies in the array assignment and return. The reverse method is supposed to return an array with the values of the input array in reverse order, so the method creates a new array to do this, and the `for` loop is supposed to assign the values (from the last index to 0 index of the input array) to the new array from index 0 to the last index.\
   **Buggy code before the fix**
   ```
    static int[] reversed(int[] arr) {
@@ -145,4 +145,29 @@ The standard use of the command follows the formula `grep <command> <file to sea
   ./911report/chapter-9.txt:New York City
   ./911report/chapter-9.txt:New York City
   ```
-- `grep -l`: display only file names of files with matching lines
+- `grep -l`: display only file names of files with matching lines\
+  This command searches through the specified file/ files for the pattern, and if the pattern is found, it only prints out the file names (and their relative paths) of the files that contain the pattern in the terminal. It's very helpful for when you want to count the exact number of files (of a certain type) that contain the pattern, or if you want to know which files contain info on a certain topic (i.e. for research, so you can go through and read them to get info on your desired pattern).\
+  *example 1:*
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -l "virus" ./biomed/ar*.txt
+  ./biomed/ar104.txt
+  ./biomed/ar331.txt
+  ./biomed/ar409.txt
+  ./biomed/ar429.txt
+  ./biomed/ar601.txt
+  ./biomed/ar619.txt
+  ./biomed/ar745.txt
+  ./biomed/ar774.txt
+  ./biomed/ar795.txt
+  ```
+  *example 2:*\
+  If the command is called on a specific file, and the pattern is found in that file, it still returns the relative path (output is a single relative path to the specified file).
+  ```
+  (base) Adas-MacBook-Pro:technical adahe$ grep -l "a" ./biomed/ar104.txt
+  ./biomed/ar104.txt
+  ```
+  ##Citations
+  I used ChatGPT to help with my research on the `grep` command! I inputed the prompt
+  "what are command line options for grep?" and received a list of labels with a short phrase describing its use. From there, I did my own command line testing of each label, and without referring back to the ChatGPT outputs, summarized in my own words what the command was doing. I noticed that ChatGPT's responses contained repetition - the algorithm shared a few labels more than once.\
+  **ChatGPT's output:**
+  
