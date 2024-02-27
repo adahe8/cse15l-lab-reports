@@ -17,7 +17,7 @@ Commands used & keys pressed: `<Ctrl><R>vim L<Enter>` got the `vim ListExamples.
 Keys pressed: `<up><up><Enter>` - `bash test.sh` was 2 up in my command history, so I used the up key twice to navigate to it, and then I hit the enter key to run it again. The output in terminal shows that all tests have indeed passed, indicating that my fix was successful.
 10. **Commit & push changes to Github**  
 Commands in terminal:
-![Image](commitandpush)  
+![Image](commitandpush.png)  
 The vim editor that opens after running the `git commit` command:
-![Image](commitmsg) 
+![Image](commitmsg.png) 
 Commands: I first used `git commit <command><C><command><V><Enter>`, where I copy-pasted the name of the changed file, `ListExamples.java`, from its appearance in a prior command in the terminal (`vim ListExamples.java`), and ran it. This opened up the commit message screen in vim, shown above, where I pressed `i` to enter insert mode and typed in my commit message, before pressing `<Ctrl><C>` to exit insert mode. Then I used `:wq!` to save and close out/ submit my commit message. Finally, I typed the command `git push` to add and store my changes to `lab7` on the remote repository on Github.
