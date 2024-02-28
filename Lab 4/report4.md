@@ -8,8 +8,10 @@ Keys pressed: `<Ctrl><R> g <enter>` - in my command history, the most recent ins
 6. **Run the tests in `ListExamplesTests.java`**  
 ![Image](testfailed.png)  
 Commands & keys pressed: `cd lab7`,`<Ctrl><R>ba<Enter>`. I had to first `cd` into lab7 to have it as my working directory, so I could run the `test.sh` file. During week 7's lab, I had used the `bash test.sh` command while working through the lab, but because `<Ctrl><R>` search yields the commands that contain `b` anywhere in the text, it was not the first command to appear. Typing 'a' next did make `bash test.sh` populate the line (it's the most recent command containing `ba` in sequence that I had run), so I pressed `<Enter>` to run it again. The `test.sh` file contained the code to run the tests, so I got the displayed test results.
-7. **Fix the bug**  
+7. **Fix the bug**
+Entering vim mode:
 ![Image](entervim.png)  
+Editing in vim:
 ![Image](editinvim.png)
 Commands used & keys pressed: `<Ctrl><R>vim L<Enter>` got the `vim ListExamples.java` command to populate the current terminal line, since I had used it during lab on Thursday, but used `vimtutor` again since, so it was not the first value to appear when I typed `v` in search mode. My use of `<Enter>` ran the command again, so the code in `ListExamples.java` appeared in Vim on my screen, with my cursor at the first character at the top. From there, I pressed the following string of keys: `44$bbhh` to navigate my cursor over the the  '1' at the end of `index1` (since the bug is that `index1` is incremented instead of `index2`) - I knew from the `test.sh` output that the bug was on line 44, and `$` in vim lets me jump to the end of each line. From there, I used `bb` to backtrack 2 'word' spaces (segments of space separated code), and 'hh' to backtrack 2 more spaces to the left so my cursor was in the right place. Then I pressed `r2`: in vim `r` replaces the character under the cursor with the specified character. Finally, to save my changes and close out, I used `:wq!`
 9. **Run tests again to confirm fix**  
