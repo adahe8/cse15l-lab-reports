@@ -9,7 +9,7 @@ Keys pressed: `<Ctrl><R> g <enter>` - in my command history, the most recent ins
 ![Image](testfailed.png)  
 Commands & keys pressed: `cd lab7`,`<Ctrl><R>ba<Enter>`. I had to first `cd` into lab7 to have it as my working directory, so I could run the `test.sh` file. During week 7's lab, I had used the `bash test.sh` command while working through the lab, but because `<Ctrl><R>` search yields the commands that contain `b` anywhere in the text, it was not the first command to appear. Typing 'a' next did make `bash test.sh` populate the line (it's the most recent command containing `ba` in sequence that I had run), so I pressed `<Enter>` to run it again. The `test.sh` file contained the code to run the tests, so I got the displayed test results.
 7. **Fix the bug**  
-Entering vim mode:
+Entering vim mode:  
 ![Image](entervim.png)  
 Editing in vim:
 ![Image](editinvim.png)
