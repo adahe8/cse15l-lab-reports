@@ -5,9 +5,9 @@ Here is a sample Edstem post for a debugging scenario!
 ### Student
 **Ansa Mei**  
 Hello! I'm experimenting the autograder example introduced to us during lecture in Lab 6, and I'm encountering an issue when I run my grader.sh file. I;t catches missing files and compile errors within the github repos that the program takes as input just fine, but it won't print out the score like it should - instead of printing out the number of succesful tests / total number of tests, it just prints a slash with no numbers:  
-![Image.png]
+![symptom.png]
 I think the bug might be in my definitions for the ` tests `, ` failures `, variables, since for some reason the numbers of tests and `successes` aren't getting fetched from the `jUnit` test output.  Here's my code:
-![Image.png]  
+![symptom+terminalcommand.png]  
 And here's the terminal command that resulted in the symptom, if that helps:
 
 Why might I be getting this error? Can I get help debugging?
@@ -19,6 +19,10 @@ Thanks for providing the symptom, program code, and command line input! You're o
 ### Student Follow Up (Bug Description)
 Hi Tutor!
 Thanks for your feedback - I realized that I didn't include a space character in my delimeters for awk when I should have, since I want to split the final test-count output string of the jUnit tests into a list of words, and that means breaking them up by spaces as well as commas. Now I'm getting this output though - there's another bug I'm not catching in the same code.
+![implementedfix.png]  
+
+**File system**
+
 
 ## Part 2: Reflection
 During the second half of this quarter, I learned a lot about debugging! Particularly, I found our practice with `jdb` really helpfull and interesting; figuring out the location of infinite loops required a lot more manual scanning at first, so I really appreciated how `jdb` allowed me to check local variable values and identify the  location of the issue. I also loved how we covered in class the methods that ChatGPT could be used constructively to help improve programming efficiency!
