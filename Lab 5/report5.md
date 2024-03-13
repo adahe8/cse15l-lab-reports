@@ -4,12 +4,11 @@
 Here is a sample Edstem post for a debugging scenario!
 ### Student
 **Ansa Mei**  
-Hello! I'm experimenting the autograder example introduced to us during lecture in Lab 6, and I'm encountering an issue when I run my grader.sh file. I;t catches missing files and compile errors within the github repos that the program takes as input just fine, but it won't print out the score like it should - instead of printing out the number of succesful tests / total number of tests, it just prints a slash with no numbers:  
-![](symptom.png)
+Hello! I'm experimenting the autograder example introduced to us during lecture in Lab 6, and I'm encountering an issue when I run my grader.sh file. I;t catches missing files and compile errors within the github repos that the program takes as input just fine, but it won't print out the score like it should - instead of printing out the number of succesful tests / total number of tests, it just prints a slash with no numbers. Here's a picture of the symptom with the terminal command that triggered it:  
+![](symptom+terminalcommand.png)  
 I think the bug might be in my definitions for the ` tests `, ` failures `, variables, since for some reason the numbers of tests and `successes` aren't getting fetched from the `jUnit` test output.  Here's my code:  
 ![](programcode.png)  
-And here's the terminal command that produced the symptom, if that helps:  
-![](symptom+terminalcommand.png)  
+
 Why might I be getting this error? Can I get help debugging?
 
 ### Tutor
